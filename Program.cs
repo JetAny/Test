@@ -40,10 +40,10 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
-//app.MapControllerRoute(
-//name: "default",
-//pattern: "{controller=Home}/{action=Index}/{id?}");
-//app.Map("/hello", [Authorize] () => "Hello World!");
-//app.Map("/", () => "Home Page");
+app.MapControllerRoute(
+name: "default",
+pattern: "{controller=Home}/{action=Index}/{id?}");
+app.Map("/hello", [Authorize] () => "Hello World!");
+app.Map("/", () => "Home Page");
 
 app.Run();
